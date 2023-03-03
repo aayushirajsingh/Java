@@ -1,0 +1,29 @@
+/* Example of BorderLayout class: Using BorderLayout(int hgap, int vgap) constructor */
+package Java_Swing.Layout;
+import java.awt.*;
+import javax.swing.*;
+
+public class Border_layout_1 {
+    JFrame jframe;
+    Border_layout_1()
+    {
+        jframe = new JFrame();
+        JButton btn1 = new JButton("NORTH");    
+        JButton btn2 = new JButton("SOUTH");    
+        JButton btn3 = new JButton("EAST");   
+        JButton btn4 = new JButton("WEST");    
+        JButton btn5 = new JButton("CENTER");  
+        jframe.setLayout(new BorderLayout(20,15));
+        jframe.add(btn1,BorderLayout.NORTH);
+        jframe.add(btn2, BorderLayout.SOUTH);    
+        jframe.add(btn3, BorderLayout.EAST);    
+        jframe.add(btn4, BorderLayout.WEST);    
+        jframe.add(btn5, BorderLayout.CENTER);
+        jframe.setSize(300,300);
+        jframe.setVisible(true);
+    }
+    public static void main(String[] args) 
+    {
+        new Border_layout_1();
+    }
+}
